@@ -85,6 +85,6 @@ int maxID(SinhVien sv[], int numberStudent) {
 		}
 		return max;
 	}
-	else return 0;
+	return 0;
 }
 /************************ END OF FILE ************************/
