@@ -75,4 +75,16 @@ void modifyStudent(SinhVien sv[], int numberStudent) {
 		break;
 	}
 }
+
+int maxID(SinhVien sv[], int numberStudent) {
+	int max;
+	if (numberStudent > 0) {
+		max = sv[0].id;
+		for (int i = 1; i < numberStudent; i++) {
+			if (max < sv[i].id) max = sv[i].id;
+		}
+		return max;
+	}
+	else return 0;
+}
 /************************ END OF FILE ************************/

@@ -16,17 +16,16 @@ void clean_stdin(void)
 }
 
 void pressAnyKey() {
-	cout << "\n\nBam phim bat ky de tiep tuc...";
-	_getch();
+	system("pause");
 	system("cls");
 }
 
 int main() {
 	SinhVien sinhvien[MaxStudent];
 	int key;
-	int idCount = 0;
 	char path[] = "D:\\Visual Studio 2022/QLSV/QLSV.txt";
-	int soluongSV = readFile(sinhvien, path);
+	int numberSV = readFile(sinhvien, path);
+	int idSV = maxID(sinhvien, numberSV);
 	while (1)
 	{
 		cout << "********************************************" << endl;
@@ -45,47 +44,47 @@ int main() {
 		{
 		case 1:
 			cout << "\n1. Them Sinh Vien" << endl;
-			idCount++;
-			addNewStudent(sinhvien, idCount, soluongSV);
-			soluongSV++;
+			idSV++;
+			addNewStudent(sinhvien, idSV, numberSV);
+			numberSV++;
 			pressAnyKey();
 			break;
 		case 2:
 			cout << "\n2. Thong tin Sinh Vien" << endl;
-			showStudent(sinhvien, soluongSV);
+			showStudent(sinhvien, numberSV);
 			pressAnyKey();
 			break;
 		case 3:
 			cout << "\n3. Xoa Sinh Vien" << endl;
-			if (removeStudent(sinhvien, soluongSV)) {
-				soluongSV--;
+			if (removeStudent(sinhvien, numberSV)) {
+				numberSV--;
 			}
 			pressAnyKey();
 			break;
 		case 4:
 			cout << "\n4. Chinh sua thong tin Sinh Vien" << endl;
-			modifyStudent(sinhvien, soluongSV);
+			modifyStudent(sinhvien, numberSV);
 			pressAnyKey();
 			break;
 		case 5:
 			cout << "\n5. Sap xep danh sach Sinh Vien" << endl;
-			sortStudent(sinhvien, soluongSV);
+			sortStudent(sinhvien, numberSV);
 			pressAnyKey();
 			break;
 		case 6:
 			cout << "\n6. Tim kiem Sinh Vien" << endl;
-			findStudent(sinhvien, soluongSV);
+			findStudent(sinhvien, numberSV);
 			pressAnyKey();
 			break;
 		case 7:
 			cout << "\n7. Viet du lieu sinh vien vao file" << endl;
-			if (writeFile(sinhvien, path, soluongSV)) cout << "OK !!!" << endl;
+			if (writeFile(sinhvien, path, numberSV)) cout << "OK !!!" << endl;
 			else cout << "Error !!!" << endl;
 			pressAnyKey();
 			break;
 		case 8:
 			cout << "\n8. Doc du lieu sinh vien tu file" << endl;
-			showStudent(sinhvien, soluongSV);
+			showStudent(sinhvien, numberSV);
 			pressAnyKey();
 			break;
 		default:
