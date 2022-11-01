@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\libraries">
+      <UniqueIdentifier>{18d9a0bf-0c12-49cb-a8a4-fd6652cda0b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\libraries\Add_Student">
+      <UniqueIdentifier>{6f97f22c-8b07-4e8b-8f5f-ef18b532b8c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\libraries\Sort_Modify_Student">
+      <UniqueIdentifier>{2239533b-6f36-4d62-a63e-9456823a847d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\libraries\Read_Write_File">
+      <UniqueIdentifier>{b8090628-f6d2-4e10-8a41-ceee0cb4b054}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\Add_Student\add_Student.cpp">
+      <Filter>Resource Files\libraries\Add_Student</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\Sort_Search_Student\sort_find_Student.cpp">
+      <Filter>Resource Files\libraries\Sort_Modify_Student</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\Read_Write_File\Read_Write.cpp">
+      <Filter>Resource Files\libraries\Read_Write_File</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libraries\Add_Student\add_Student.h">
+      <Filter>Resource Files\libraries\Add_Student</Filter>
+    </ClInclude>
+    <ClInclude Include="libraries\Sort_Search_Student\sort_find_Student.h">
+      <Filter>Resource Files\libraries\Sort_Modify_Student</Filter>
+    </ClInclude>
+    <ClInclude Include="libraries\Read_Write_File\Read_Write.h">
+      <Filter>Resource Files\libraries\Read_Write_File</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
