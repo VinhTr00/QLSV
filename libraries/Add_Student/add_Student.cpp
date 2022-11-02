@@ -6,16 +6,35 @@ using namespace std;
 extern void clean_stdin(void);
 
 /* Private functions ---------------------------------------------------------*/
+
+void enterAgainINT(int& a) {
+	char buf[20];
+	do {
+		gets_s(buf);
+		a = atoi(buf);
+		if (a == 0) cout << "\nEnter number again: ";
+	} while (a == 0);
+}
+
+void enterAgainFLOAT(float& a) {
+	char buf[20];
+	do {
+		gets_s(buf);
+		a = atof(buf);
+		if (a == 0) cout << "\nEnter number again: ";
+	} while (a == 0);
+}
+
 void addNewInformation(SinhVien& sv, int id) {
-	cout << "\n Nhap ho va ten dem sinh vien: "; clean_stdin(); gets_s(sv.lastname);
+	cout << "\n Nhap ho va ten dem sinh vien: "; gets_s(sv.lastname);
 	cout << "\n Nhap ten sinh vien: "; gets_s(sv.name);
 	cout << "\n Nhap gioi tinh sinh vien (Male/Female/LGBT): "; gets_s(sv.sex); 
 	cout << "\n Khoa dao tao cua sinh vien: "; gets_s(sv.faculty);
 	cout << "\n Nganh dao tao cua sinh vien: "; gets_s(sv.major);
 	cout << "\n Que quan cua sinh vien: "; gets_s(sv.country);
-	cout << "\n Diem dau vao cua sinh vien: "; cin >> sv.entryPoint;	
-	cout << "\n Diem trung binh cua sinh vien: "; cin >> sv.gpa;
-	cout << "\n Nhap tuoi sinh vien: "; cin >> sv.age;
+	cout << "\n Diem dau vao cua sinh vien: "; enterAgainFLOAT(sv.entryPoint);
+	cout << "\n Diem trung binh cua sinh vien: "; enterAgainFLOAT(sv.gpa);
+	cout << "\n Nhap tuoi sinh vien: "; enterAgainINT(sv.age);
 	sv.id = id;
 	cout << "\n *** Them sinh vien thanh cong ***" << endl;
 }
@@ -31,7 +50,7 @@ void showStudent(SinhVien sv[], int numberStudent) {
 		printf("\n\ %d", i + 1);
 		printf("\t%d", sv[i].id);
 		printf("\t%s", sv[i].name);
-		printf("\t%s", sv[i].lastname);
+		printf("\t\t%s", sv[i].lastname);
 		printf("\t%d", sv[i].age);
 		printf("\t%s", sv[i].sex);
 		printf("\t%s", sv[i].country);

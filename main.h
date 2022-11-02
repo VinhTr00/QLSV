@@ -9,7 +9,7 @@ typedef struct SVien{
 	char name[30];
 	char lastname[30];
 	char sex[10];
-	char country[10];
+	char country[30];
 	int age;
 	char faculty[30];
 	char major[30];

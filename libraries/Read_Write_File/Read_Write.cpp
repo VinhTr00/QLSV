@@ -20,7 +20,7 @@ int readFile(SinhVien sv[], char path[]) {
 		i++;
 	}
 	printf("\nTim thay %d sinh vien trong file\n", i);
-	showStudent(sv, i);
+	if (i != 0) showStudent(sv, i);
 	return i;	
 }
 

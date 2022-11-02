@@ -16,12 +16,13 @@ void clean_stdin(void)
 }
 
 void pressAnyKey() {
+	cout << "" << endl;
 	system("pause");
 	system("cls");
 }
-
 int main() {
 	SinhVien sinhvien[MaxStudent];
+	char buf[20];
 	int key;
 	char path[] = "D:\\Visual Studio 2022/QLSV/QLSV.txt";
 	int numberSV = readFile(sinhvien, path);
@@ -39,7 +40,7 @@ int main() {
 		cout << "**** 8. Doc du lieu sinh vien tu file   ****" << endl;
 		cout << "********************************************" << endl;
 		cout << "Enter number: ";
-		cin >> key;
+		enterAgainINT(key);
 		switch (key)
 		{
 		case 1:
