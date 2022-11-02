@@ -84,7 +84,7 @@ int main() {
 			break;
 		case 8:
 			cout << "\n8. Doc du lieu sinh vien tu file" << endl;
-			showStudent(sinhvien, numberSV);
+			readFile(sinhvien, path);
 			pressAnyKey();
 			break;
 		default:
