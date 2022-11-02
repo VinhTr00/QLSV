@@ -7,6 +7,7 @@ extern void clean_stdin(void);
 
 /* Private functions ---------------------------------------------------------*/
 
+// If you enter a string, it will be converted to an integer
 void enterAgainINT(int& a) {
 	char buf[20];
 	do {
@@ -16,6 +17,7 @@ void enterAgainINT(int& a) {
 	} while (a == 0);
 }
 
+// LIMITED INPUT: If you enter a string, it will be converted to 0
 void enterAgainFLOAT(float& a) {
 	char buf[20];
 	do {
@@ -25,6 +27,7 @@ void enterAgainFLOAT(float& a) {
 	} while (a == 0);
 }
 
+// Enter the name of the student
 void addNewInformation(SinhVien& sv, int id) {
 	cout << "\n Nhap ho va ten dem sinh vien: "; gets_s(sv.lastname);
 	cout << "\n Nhap ten sinh vien: "; gets_s(sv.name);
@@ -39,11 +42,13 @@ void addNewInformation(SinhVien& sv, int id) {
 	cout << "\n *** Them sinh vien thanh cong ***" << endl;
 }
 
+// Add a new student to the list
 void addNewStudent(SinhVien sv[], int id, int numberStudent) {
 	cout << "\n **** Nhap du lieu sinh vien thu " << numberStudent + 1 << " ****" << endl;
 	addNewInformation(sv[numberStudent], id);
 }
 
+// Show student information
 void showStudent(SinhVien sv[], int numberStudent) {
 	printf("\n\STT\tID\tFirst Name\tLast Name\tAge\tSex\tCountry\t\tFaculty\t\tMajor\tEntryPoint\tGPA");
 	for (int i = 0; i < numberStudent; i++) {
@@ -61,6 +66,7 @@ void showStudent(SinhVien sv[], int numberStudent) {
 	}
 }
 
+// Remove a student from the list
 int removeStudent(SinhVien sv[], int numberStudent) {
 	cout << "Nhap MSSV muon xoa khoi danh sach" << endl;
 	int MSSV;
@@ -83,6 +89,7 @@ int removeStudent(SinhVien sv[], int numberStudent) {
 	else return 1;
 }
 
+// Edit student information
 void modifyStudent(SinhVien sv[], int numberStudent) {
 	cout << "Nhap ID cua sinh vien muon thay doi thong tin" << endl;
 	int ID;
@@ -95,6 +102,7 @@ void modifyStudent(SinhVien sv[], int numberStudent) {
 	}
 }
 
+// Search for a student by ID
 int maxID(SinhVien sv[], int numberStudent) {
 	int max;
 	if (numberStudent > 0) {
